@@ -11,7 +11,7 @@ router.get('/:id', API.fetchPostDetail);
 // コンテンツの投稿
 router.post('/', API.createPost);
 // 指定DIのコンテンツの投稿
-router.patch('/:id', API.updatePost);
+router.put('/:id', API.updatePost);
 // 指定IDのコンテンツの削除
 router.delete('/:id', API.deletePost);
 
