@@ -14,6 +14,10 @@ router.post('/', API.createPost);
 router.put('/:id', API.updatePost);
 // 指定IDのコンテンツの削除
 router.delete('/:id', API.deletePost);
+// サインアップ
+router.post("/signup", API.signup)
+// ログイン
+router.post("/login", API.login)
 
 module.exports = router;
 
