@@ -83,7 +83,7 @@ module.exports = class API {
 
       // パスワードを照合
       const isMatch = await bcrypt.compare(password, user.password);
-      if(isMatch) return res.status(401).json({ message: "パスワードが一致しません"})
+      if(!isMatch) return res.status(401).json({ message: "パスワードが一致しません"})
       
       // JWTトークン発行
       // ヘッダ、ペイロード、著名をそれぞれエンコードし連結させたもの
